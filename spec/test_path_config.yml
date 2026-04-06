@@ -1,0 +1,13 @@
+left_flag_path:
+  turn_left_flag: true
+
+right_flag_path:
+  turn_left_flag: false
+
+percent_path:
+  turn_left_percentage: 33.0
+  turn_left_percent_cache: false
+
+cached_percent_path:
+  turn_left_percentage: 66.0
+  turn_left_percent_cache: true
