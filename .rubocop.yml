@@ -1,0 +1,9 @@
+AllCops:
+  NewCops: enable
+
+plugins:
+  - rubocop-rspec
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always_true

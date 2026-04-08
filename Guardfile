@@ -14,8 +14,21 @@
 #  $ ln -s config/Guardfile .
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
-guard :rspec, cmd: "bundle exec rspec" do
-  watch('./spec/spec_helper.rb') { "spec" }
+guard :rspec, cmd: 'bundle exec rspec' do
+  watch('./spec/spec_helper.rb') { 'spec' }
   watch(%r{^spec/(.+)_spec\.rb}) { |m| "spec/#{m[1]}_spec.rb" }
-  watch(%r{^lib/(.+)\.rb})  { |m| "spec/#{m[1]}_spec.rb" }
+  watch(%r{^lib/(.+)\.rb}) { |m| "spec/#{m[1]}_spec.rb" }
+end
+
+guard :bundler do
+  watch('Gemfile')
+end
+
+guard(:rdoc, format: :sdoc) do
+  watch(%r{^lib/.*\.rb})
+end
+
+guard(:rubocop) do
+  watch(%r{^lib/.*\.rb})
+  watch(%r{^spec/.*\.rb})
 end
