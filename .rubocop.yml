@@ -7,3 +7,18 @@ plugins:
 Style/FrozenStringLiteralComment:
   Enabled: true
   EnforcedStyle: always_true
+  Exclude:
+    - 'Guardfile'
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+RSpec/ContextWording:
+  Prefixes:
+    - when
+    - with
+    - without
+    - and

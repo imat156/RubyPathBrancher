@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'path_brancher'
 require "#{PathBrancher::RUBY_LIBRARY_PATH}/path_brancher/path_result_cache"
